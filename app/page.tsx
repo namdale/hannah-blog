@@ -20,7 +20,7 @@ export default function BlogIndex() {
           />
         </div>
         <h1
-          className="mt-8 animate-fade-up text-3xl font-bold uppercase tracking-wider2 sm:text-5xl"
+          className="mt-8 animate-fade-up text-3xl font-extrabold uppercase tracking-wider2 sm:text-5xl"
           style={{ animationDelay: "0.1s" }}
         >
           Hannah Beauty Blog

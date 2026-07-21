@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Jost } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import "./globals.css";
 
-const jost = Jost({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-jost",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={jost.variable}>
+    <html lang="en" className={montserrat.variable}>
       <body className="bg-background font-body text-ink antialiased">
         <SiteHeader />
         <main className="min-h-[60vh]">{children}</main>

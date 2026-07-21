@@ -16,8 +16,8 @@ const config: Config = {
         background: "#FFFFFF",
       },
       fontFamily: {
-        display: ["var(--font-jost)", "sans-serif"],
-        body: ["var(--font-jost)", "sans-serif"],
+        display: ["var(--font-sans)", "sans-serif"],
+        body: ["var(--font-sans)", "sans-serif"],
       },
       letterSpacing: {
         wider2: "0.15em",
