@@ -1,19 +1,13 @@
 import type { Metadata } from "next";
-import { Archivo_Black, Jost } from "next/font/google";
+import { Jost } from "next/font/google";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import "./globals.css";
 
-const display = Archivo_Black({
-  weight: "400",
+const jost = Jost({
   subsets: ["latin"],
-  variable: "--font-display",
-});
-
-const body = Jost({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-body",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-jost",
 });
 
 export const metadata: Metadata = {
@@ -37,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    <html lang="en" className={jost.variable}>
       <body className="bg-background font-body text-ink antialiased">
         <SiteHeader />
         <main className="min-h-[60vh]">{children}</main>

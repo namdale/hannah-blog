@@ -9,19 +9,33 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#C8352E", // Hannah Beauty signature red — fine-tune with DevTools if needed
+        primary: "#C8352E",
         ink: "#1A1A1A",
         muted: "#6B6B6B",
         surface: "#EDEDED",
         background: "#FFFFFF",
       },
       fontFamily: {
-        display: ["var(--font-display)", "sans-serif"],
-        body: ["var(--font-body)", "sans-serif"],
+        display: ["var(--font-jost)", "sans-serif"],
+        body: ["var(--font-jost)", "sans-serif"],
       },
       letterSpacing: {
         wider2: "0.15em",
         widest2: "0.25em",
+      },
+      keyframes: {
+        "fade-up": {
+          "0%": { opacity: "0", transform: "translateY(18px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
+      animation: {
+        "fade-up": "fade-up 0.7s ease-out both",
+        "fade-in": "fade-in 0.9s ease-out both",
       },
       typography: ({ theme }: { theme: (path: string) => string }) => ({
         hannah: {
@@ -36,7 +50,7 @@ const config: Config = {
             h2: {
               textTransform: "uppercase",
               letterSpacing: "0.12em",
-              fontWeight: "600",
+              fontWeight: "700",
             },
             h3: {
               textTransform: "uppercase",

@@ -14,7 +14,7 @@ export default function SiteHeader() {
     <header>
       {/* Red announcement banner — mirrors the main site */}
       <div className="bg-primary px-4 py-3 text-center text-white">
-        <p className="font-display text-sm uppercase tracking-wider2 sm:text-base">
+        <p className="text-sm font-bold uppercase tracking-wider2 sm:text-base">
           Hannah Beauty Academy
         </p>
         <p className="mt-1 text-sm font-light tracking-wide sm:text-base">
@@ -45,7 +45,7 @@ export default function SiteHeader() {
           </div>
           <a
             href={`${MAIN}/#book`}
-            className="bg-primary px-6 py-2.5 text-sm uppercase tracking-wider2 text-white transition-opacity hover:opacity-90"
+            className="bg-primary px-6 py-2.5 text-sm uppercase tracking-wider2 text-white transition duration-300 hover:opacity-90 active:scale-95"
           >
             Book
           </a>

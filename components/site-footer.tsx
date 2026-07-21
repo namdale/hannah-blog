@@ -4,7 +4,7 @@ export default function SiteFooter() {
   return (
     <footer className="mt-24 border-t border-ink/10 bg-surface">
       <div className="mx-auto max-w-6xl px-4 py-12 text-center">
-        <p className="font-display text-lg uppercase tracking-wider2">
+        <p className="text-lg font-bold uppercase tracking-wider2">
           Hannah Beauty
         </p>
         <p className="mt-2 text-sm font-light tracking-wide text-muted">
