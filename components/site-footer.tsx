@@ -31,7 +31,7 @@ export default function SiteFooter() {
           <a href={`${MAIN}/academy`} className="hover:text-primary">
             Academy
           </a>
-          <a href={`${MAIN}/book`} className="hover:text-primary">
+          <a href={`${MAIN}/#book`} className="hover:text-primary">
             Book appointment
           </a>
         </div>

@@ -70,7 +70,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
           treatments or academy courses.
         </p>
         <a
-          href={`${MAIN}/book`}
+          href={`${MAIN}/#book`}
           className="mt-6 inline-block border border-white bg-white px-8 py-3 text-sm uppercase tracking-wider2 text-primary transition hover:bg-transparent hover:text-white"
         >
           Book now

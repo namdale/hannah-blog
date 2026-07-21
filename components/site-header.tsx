@@ -20,7 +20,7 @@ export default function SiteHeader() {
         <p className="mt-1 text-sm font-light tracking-wide sm:text-base">
           Looking for an exciting new career in beauty?{" "}
           <a
-            href={`${MAIN}/book`}
+            href={`${MAIN}/#book`}
             className="underline underline-offset-4 hover:opacity-80"
           >
             Contact us
@@ -44,7 +44,7 @@ export default function SiteHeader() {
             ))}
           </div>
           <a
-            href={`${MAIN}/book`}
+            href={`${MAIN}/#book`}
             className="bg-primary px-6 py-2.5 text-sm uppercase tracking-wider2 text-white transition-opacity hover:opacity-90"
           >
             Book
