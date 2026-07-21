@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllPosts, getPost, formatDate } from "@/lib/posts";
@@ -34,19 +33,8 @@ export default function PostPage({ params }: { params: { slug: string } }) {
     <article className="mx-auto max-w-3xl px-4">
       {/* Post header — logo + bold uppercase title, Academy-page style */}
       <header className="py-14 text-center sm:py-16">
-        <div className="animate-fade-up">
-          <Image
-            src="/logo.png"
-            alt="Hannah Beauty"
-            width={56}
-            height={81}
-            className="mx-auto"
-            priority
-          />
-        </div>
         <p
-          className="mt-8 animate-fade-up text-xs uppercase tracking-widest2 text-primary"
-          style={{ animationDelay: "0.1s" }}
+          className="animate-fade-up text-xs uppercase tracking-widest2 text-primary"
         >
           {post.category}
         </p>
