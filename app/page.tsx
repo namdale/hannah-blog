@@ -20,7 +20,7 @@ export default function BlogIndex() {
           />
         </div>
         <h1
-          className="mt-8 animate-fade-up text-3xl font-extrabold uppercase tracking-wider2 sm:text-5xl"
+          className="mt-8 animate-fade-up text-3xl font-bold uppercase tracking-wider2 sm:text-5xl"
           style={{ animationDelay: "0.1s" }}
         >
           Hannah Beauty Blog
@@ -69,7 +69,7 @@ export default function BlogIndex() {
               <p className="mt-6 text-center text-xs uppercase tracking-widest2 text-primary">
                 {post.category}
               </p>
-              <h2 className="mt-2 text-center text-xl font-semibold uppercase tracking-wider2 transition-colors duration-300 group-hover:text-primary sm:text-2xl">
+              <h2 className="mt-2 text-center text-2xl font-semibold uppercase tracking-[0.08em] transition-colors duration-300 group-hover:text-primary">
                 {post.title.split(" — ")[0]}
               </h2>
               <p className="mx-auto mt-3 line-clamp-2 max-w-sm text-center text-sm font-light leading-relaxed tracking-wide text-muted">

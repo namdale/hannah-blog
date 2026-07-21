@@ -39,7 +39,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
           {post.category}
         </p>
         <h1
-          className="mt-4 animate-fade-up text-2xl font-extrabold uppercase leading-snug tracking-wider2 sm:text-4xl"
+          className="mt-4 animate-fade-up text-2xl font-bold uppercase leading-snug tracking-wider2 sm:text-4xl"
           style={{ animationDelay: "0.15s" }}
         >
           {post.title}
