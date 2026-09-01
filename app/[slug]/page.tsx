@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllPosts, getPost, formatDate } from "@/lib/posts";
+import { postNode, graph, jsonLd } from "@/lib/schema";
 
 const MAIN = "https://www.hannahbeauty.co.nz";
 
@@ -31,6 +32,11 @@ export default function PostPage({ params }: { params: { slug: string } }) {
 
   return (
     <article className="mx-auto max-w-3xl px-4">
+      {/* 이 글이 Hannah Beauty 가 쓴 것임을 기계가 읽을 수 있게 선언 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(graph(postNode(post))) }}
+      />
       {/* Post header — logo + bold uppercase title, Academy-page style */}
       <header className="py-14 text-center sm:py-16">
         <p
@@ -58,7 +64,9 @@ export default function PostPage({ params }: { params: { slug: string } }) {
           <img
             src={post.cover}
             alt={post.title}
-            className="aspect-[16/9] h-auto w-full object-cover grayscale"
+            className={`aspect-[16/9] h-auto w-full object-cover${
+              post.coverColor ? "" : " grayscale"
+            }`}
           />
         </div>
       )}

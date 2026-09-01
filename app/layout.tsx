@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
+import { businessNode, blogNode, graph, jsonLd } from "@/lib/schema";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -32,6 +33,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={montserrat.variable}>
+      <head>
+        {/*
+          사업장 노드의 @id 는 본 사이트와 동일합니다.
+          이게 있어야 크롤러가 이 블로그를 Hannah Beauty 의 것으로 인식합니다.
+        */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: jsonLd(graph(businessNode(), blogNode())),
+          }}
+        />
+      </head>
       <body className="bg-background font-body text-ink antialiased">
         <SiteHeader />
         <main className="min-h-[60vh]">{children}</main>

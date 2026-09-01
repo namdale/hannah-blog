@@ -11,6 +11,9 @@ export type PostMeta = {
   excerpt: string;
   category: string;
   cover?: string;
+  /** true 면 커버 이미지를 흑백 처리하지 않고 원본 색으로 보여준다.
+   *  색이 글의 내용인 경우(색소 교정, 립블러시 색상 등)에 쓴다. 기본은 흑백. */
+  coverColor?: boolean;
 };
 
 export type Post = PostMeta & { content: string };
@@ -31,6 +34,7 @@ export function getAllPosts(): PostMeta[] {
       excerpt: data.excerpt ?? "",
       category: data.category ?? "Journal",
       cover: data.cover,
+      coverColor: data.coverColor === true,
     } as PostMeta;
   });
 
@@ -51,6 +55,7 @@ export function getPost(slug: string): Post | null {
         excerpt: data.excerpt ?? "",
         category: data.category ?? "Journal",
         cover: data.cover,
+        coverColor: data.coverColor === true,
         content,
       };
     }

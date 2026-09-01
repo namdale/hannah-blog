@@ -58,6 +58,26 @@ const config: Config = {
               fontWeight: "600",
             },
             a: { textUnderlineOffset: "4px" },
+            // 본문 이미지는 글 폭을 꽉 채우지 않고 가운데로 좁게 둔다.
+            // 같은 픽셀을 좁은 영역에 담으면 화면 밀도가 올라가 더 선명해 보이고,
+            // 사진이 본문 흐름을 끊지 않는다.
+            img: {
+              maxWidth: "420px",
+              marginLeft: "auto",
+              marginRight: "auto",
+              marginTop: "0",
+              marginBottom: "0",
+              borderRadius: "2px",
+            },
+            figure: { marginTop: "2rem", marginBottom: "2rem" },
+            figcaption: {
+              textAlign: "center",
+              textTransform: "uppercase",
+              letterSpacing: "0.12em",
+              fontSize: "0.7rem",
+              marginTop: "0.9rem",
+              color: theme("colors.muted"),
+            },
           },
         },
       }),
